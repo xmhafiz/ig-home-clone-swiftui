@@ -11,7 +11,7 @@ struct StoryView: View {
     let persons = DemoStore.shared.getPersons()
     var body: some View {
         ScrollView(.horizontal, showsIndicators: false) {
-            HStack(alignment: .top, spacing: 0) {
+            LazyHStack(alignment: .top, spacing: 0) {
                 ForEach(persons) { person in
                     StoryItemView(person: person)
                         .padding(4)
